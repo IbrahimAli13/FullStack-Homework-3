@@ -1,136 +1,198 @@
-body {
-  background-color: #f2f2f2;
-}
-
 .card {
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 1000px;
-  margin: 0 auto;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border-radius: 8px;
-  margin-top: 50px;
 }
 
 .navbar {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Move navbar to the right */
 }
 
-.navbar ul {
+.logo {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.nav-links {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  margin-right: 20px;
 }
 
-.navbar ul li {
-  display: inline-block;
+.nav-links li {
   margin-right: 10px;
 }
 
-.navbar ul li a {
+.nav-links li a {
   text-decoration: none;
-  color: #333333;
+  color: black;
 }
 
-.navbar ul li a.active {
-  color: purple;
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin-left: auto;
 }
 
 .content {
   display: flex;
+  align-items: center; /* Align content vertically */
 }
 
-.left-content {
+.left-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px; /* Adjust the top margin for the left section */
 }
 
-.carousel-container {
+.left-section h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.right-section {
+  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .carousel {
-  margin: 20px auto;
-  position: relative;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Align carousel items vertically */
+  justify-content: center; /* Center carousel vertically */
+  align-items: center; /* Center carousel horizontally */
+  margin-top: 10px; /* Adjust the top margin for the carousel */
 }
 
-.carousel .card-slide {
+.carousel-item {
+  margin-right: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.indicator.active {
+  background-color: black;
+}
+
+.footer {
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.follow-btn {
+  background-color: white;
+  color: purple;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-icons {
   display: flex;
   align-items: center;
+}
+
+.social-icons {
+  display: flex;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  align-items: center;
+  margin-left: 20px;
 }
 
-.carousel .card-slide.active {
-  opacity: 1;
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
 }
 
-.carousel-controls {
-  text-align: center;
-  margin-top: 10px;
+.icon img {
+  width: 30px;
+  height: 30px;
 }
 
-.carousel-controls button {
-  background: none;
+.follower-counts {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.follower-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.platform {
+  font-weight: bold;
+}
+
+.count {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.hr {
   border: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 20px;
-  margin: 0 10px;
+  border-top: 1px solid white;
+  margin: 10px 0;
 }
 
-.carousel-controls button.disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.carousel-indicators {
-  text-align: center;
+.pictures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
 }
 
-.carousel-indicators .indicator {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 4px;
-}
-
-.carousel-indicators .indicator.active {
-  background-color: purple;
-}
-
-.right-content {
-  text-align: center;
-  flex: 1;
-}
-
-.right-content img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.search-icon {
-  margin-bottom: 0%;
-  width: 15px;
-  height: 15px;
+.pictures img {
+  width: 80px;
+  height: 80px;
 }
